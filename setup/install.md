@@ -1,9 +1,44 @@
-﻿# Setup Notes
+﻿# \# Setup
 
-- Installed Splunk Enterprise 10.6.2.5 on Windows
-- Downloaded the BOTS v3 dataset (319.7 MB) from the official S3 link
-- Verified MD5: d7ccca99a01cff070dff3c139cdc10eb (matches the official value)
-- Extracted to C:\Program Files\Splunk\etc\apps\botsv3_data_set
-- Restarted Splunk
-- Verified: index=botsv3 returns 1,944,092 events across 107 sourcetypes
-- wineventlog:security has 46,469 events across 61 EventCodes
+# 
+
+# How the lab environment was built. Tested with Splunk Enterprise 10.6.2.5 on Windows.
+
+# 
+
+# \## 1. Install Splunk Enterprise
+
+# 
+
+# Download the Windows installer from the Splunk website and install it with the default options. Open Splunk Web at `http://localhost:8000`.
+
+# 
+
+# \## 2. Download the dataset
+
+# 
+
+# Get the pre-indexed BOTS v3 archive (about 320 MB) from the official repository: https://github.com/splunk/botsv3
+
+# 
+
+# Check the MD5 hash against the value on that page:
+
+# 
+
+# ```powershell
+
+# Get-FileHash .\\botsv3\_data\_set.tgz -Algorithm MD5
+
+# ```
+
+# 
+
+# \## 3. Extract into the Splunk apps folder
+
+# 
+
+# Use 7-Zip. Open `botsv3\_data\_set.tgz`; if you see a `.tar` inside, open that too. Copy the whole `botsv3\_data\_set` folder to:
+
+# 
+
