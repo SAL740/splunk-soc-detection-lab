@@ -38,7 +38,7 @@
 
 # | `screenshots/` | Evidence of the data load and detection results |
 
-# | `setup/install.md` | Setup steps (to be added) |
+# | `setup/install.md` | How the lab was built: Splunk install, BOTS v3 download, load and verification |
 
 # 
 
