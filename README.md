@@ -41,3 +41,4 @@ Validation means each search returned the known malicious events in BOTS v3. Det
 - Passwords found in command lines are replaced with `[REDACTED]`.
 - Encoded payloads and exploit text are not reproduced.
 - BOTS v3 is a public training dataset; no real organisation's data is included.
+- The BOTS v3 dataset belongs to Splunk and is not included in this repository. The MIT license covers only the original material here (searches, write-ups and report).
